@@ -81,7 +81,7 @@ Java-Swing-Apps/
 ### 1. Clone the repository
 
 ```bash id="clone-swing"
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/vaibhv19/Java-Desktop-Applications-Suite
 cd your-repo
 ```
 
