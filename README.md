@@ -1,150 +1,148 @@
-# 🖥️ Java Swing Desktop Applications Suite
+# Java Mini Projects
 
-A collection of desktop applications built using **Java SE and Swing**, demonstrating core programming concepts, GUI design, and event-driven architecture.
+A collection of small Java desktop applications built with **Java SE** and **Swing**. Each project demonstrates GUI development, event-driven programming, and core object-oriented design.
 
-This project showcases multiple real-world mini applications, each designed to strengthen understanding of **object-oriented programming, state management, and user interaction handling**.
+## Included Applications
 
----
+- **Calculator**
+  - Basic arithmetic operations: addition, subtraction, multiplication, division
+  - Includes a Swing-based button interface and display
+- **Tic Tac Toe**
+  - Two-player board game with win and draw detection
+  - Score tracking and reset support
+- **Paint**
+  - Freehand drawing using mouse input
+  - Color selection and canvas reset
+- **Morse Code Translator**
+  - Translates typed text into Morse code in real time
+  - Plays Morse code audio tones using Java sound APIs
+- **To Do List**
+  - Add and manage tasks in a simple task panel
+  - Uses custom components and a scrollable UI
 
-## 🚀 Applications Included
+## Repository Structure
 
-### 🧮 Calculator
-
-* Performs basic arithmetic operations
-* Handles edge cases like division by zero
-* Interactive button-based input system
-
----
-
-### ❌⭕ Tic Tac Toe
-
-* Two-player game with turn-based logic
-* Win/draw detection algorithm
-* State management for board updates
-
----
-
-### 🎨 Paint Application
-
-* Freehand drawing using mouse events
-* Color selection and brush control
-* Canvas-based rendering
-
----
-
-### 📡 Morse Code Translator
-
-* Converts text ↔ Morse code
-* Efficient mapping using data structures
-* Real-time input/output handling
-
----
-
-### 📝 To-Do List
-
-* Add, delete, and manage tasks
-* Persistent storage (if implemented)
-* Simple and intuitive UI
-
----
-
-## 🛠️ Tech Stack
-
-* **Language:** Java (Java SE)
-* **GUI Framework:** Swing
-* **Core Concepts:**
-
-  * Event Handling (ActionListener, MouseListener)
-  * OOP (Encapsulation, Abstraction, Modularity)
-  * State Management
-  * Collections Framework
-
----
-
-## 📂 Project Structure
-
-```id="swing-structure"
-Java-Swing-Apps/
-│── calculator/
-│── tic-tac-toe/
-│── paint/
-│── morse-translator/
-│── todo-list/
-│
+```
+Java Mini Projects/
+├── Calculator/
+│   ├── src/
+│   │   ├── CalculatorApp.java
+│   │   ├── constants/CommonConstants.java
+│   │   ├── gui/CalculatorGui.java
+│   │   └── service/CalculatorService.java
+│   └── README.md
+├── Morse Code Translator/
+│   ├── src/
+│   │   ├── App.java
+│   │   ├── MorseCodeController.java
+│   │   └── MorseCodeTranslatorGUI.java
+│   └── README.md
+├── Paint/
+│   ├── src/
+│   │   ├── App.java
+│   │   ├── Canvas.java
+│   │   ├── ColorPoint.java
+│   │   └── PaintGui.java
+│   └── README.md
+├── Tic Tac Toe/
+│   ├── src/
+│   │   ├── App.java
+│   │   ├── CommonConstants.java
+│   │   └── TicTacToeGui.java
+│   └── README.md
+├── To Do List/
+│   ├── src/
+│   │   ├── App.java
+│   │   ├── CommonConstants.java
+│   │   ├── TaskComponent.java
+│   │   ├── ToDoList.java
+│   │   ├── ToDoListGui.java
+│   │   └── resources/
+│   └── README
 └── README.md
 ```
 
----
+## How to Run
 
-## ⚙️ How to Run
+Each app is self-contained in its own folder. Use the Java compiler and runtime from the command line, or import the folder into an IDE such as IntelliJ IDEA or Eclipse.
 
-### 1. Clone the repository
+### Run from Command Line
 
-```bash id="clone-swing"
-git clone https://github.com/vaibhv19/Java-Desktop-Applications-Suite
-cd your-repo
+1. Open a terminal in the repository root.
+2. Change into the app folder.
+3. Compile sources.
+4. Run the app.
+
+Example for **Tic Tac Toe**:
+
+```powershell
+cd "Tic Tac Toe"
+javac -d out src\*.java
+java -cp out App
 ```
 
-### 2. Compile and Run any application
+Example for **Paint**:
 
-```bash id="run-swing"
-cd calculator
-javac Main.java
-java Main
+```powershell
+cd Paint
+javac -d out src\*.java
+java -cp out App
 ```
 
-*(Repeat for other applications)*
+Example for **Morse Code Translator**:
 
----
-
-## 💡 Key Concepts Demonstrated
-
-* Event-driven programming using Swing listeners
-* GUI layout management (FlowLayout, BorderLayout, GridLayout)
-* Clean separation of logic and UI components
-* State handling across user interactions
-* Use of Java Collections for efficient data management
-
----
-
-## 🧠 Learning Outcomes
-
-* Built multiple real-world desktop applications from scratch
-* Gained hands-on experience with Java GUI development
-* Improved understanding of user interaction patterns
-* Strengthened problem-solving using OOP principles
-
----
-
-## 🔮 Future Improvements
-
-* 🎯 Migrate to JavaFX for modern UI
-* 💾 Add database integration (MySQL/MongoDB)
-* 🎨 Improve UI/UX with better styling
-* 📦 Package applications into executable JARs
-* ☁️ Convert selected apps into web-based versions
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-```bash id="contribute-swing"
-git checkout -b feature-name
-git commit -m "Add feature"
-git push origin feature-name
+```powershell
+cd "Morse Code Translator"
+javac -d out src\*.java
+java -cp out App
 ```
 
----
+Example for **Calculator** (package-based structure):
 
-## 👨‍💻 Author
+```powershell
+cd Calculator
+javac -d out src\constants\CommonConstants.java src\service\CalculatorService.java src\gui\CalculatorGui.java src\CalculatorApp.java
+java -cp out CalculatorApp
+```
+
+Example for **To Do List**:
+
+```powershell
+cd "To Do List"
+javac -d out src\*.java
+java -cp out App
+```
+
+> Note: The `To Do List` app includes a custom font file under `resources/`. If you run from a terminal, ensure the `resources` folder is available on the classpath or use an IDE that includes resources automatically.
+
+## What You Can Learn
+
+- Building desktop GUIs with Java Swing
+- Connecting UI controls to application logic
+- Managing application state and user input
+- Working with Java collections and custom components
+- Handling mouse, keyboard, and button events
+- Playing sound output with Java audio APIs
+
+## Recommended Improvements
+
+- Add persistent storage for the To Do List
+- Export Paint drawings or support different brush sizes
+- Add undo/redo for Paint and To Do List tasks
+- Improve Tic Tac Toe AI or add single-player mode
+- Migrate these apps to JavaFX for a modern UI
+
+## Contribution
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a pull request
+
+## Author
 
 **Vaibhav Gupta**
-GitHub: https://github.com/vaibhv19
 
----
 
-## ⭐ Support
-
-If you like this project, consider giving it a ⭐!

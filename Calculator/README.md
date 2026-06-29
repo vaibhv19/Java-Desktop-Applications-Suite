@@ -1,10 +1,27 @@
-This is a Java-based Calculator Application built using Swing for the graphical interface and modular OOP principles for code organization.
-It supports basic arithmetic operations like addition, subtraction, multiplication, and division.
+# Calculator
 
-CalculatorApp.java — Main entry point; starts the application.
+A Java Swing calculator application that performs basic arithmetic operations with a graphical keypad-style interface.
 
-CalculatorGui.java — Handles the graphical interface (buttons, display).
+## Features
 
-CalculatorService.java — Contains business logic for calculations (addition, subtraction, etc.).
+- Addition, subtraction, multiplication, and division
+- Clear and display state management
+- Numeric button input and decimal support
+- Uses a separate service layer for calculation logic
 
-CommonConstants.java — Central place for constants (e.g., button labels, window title)
+## Files
+
+- `CalculatorApp.java` — application entry point
+- `gui/CalculatorGui.java` — Swing UI layout and button handling
+- `service/CalculatorService.java` — calculation business logic
+- `constants/CommonConstants.java` — shared UI labels and constants
+
+## Run
+
+```powershell
+cd Calculator
+javac -d out src\constants\*.java src\service\*.java src\gui\*.java src\CalculatorApp.java
+java -cp out CalculatorApp
+```
+
+No external libraries are required; the app runs on Java SE with Swing.

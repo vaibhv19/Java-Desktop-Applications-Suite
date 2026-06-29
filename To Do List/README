@@ -1,11 +1,30 @@
 
-To Do List (Java Mini-Project)
-A simple Java console application to manage tasks effectively.
+# To Do List
 
-🧩 File Summary
+A Java Swing task manager application that allows users to add and manage tasks in a scrollable GUI.
 
-App.java -> Entry point of the application (main method).
-ToDoListGui.java -> Builds and controls the main GUI layout and interactions.
-TaskComponent.java -> Represents each task item (UI + delete logic).
-ToDoList.java -> Core logic placeholder – seems underutilized.
-CommonConstants.java -> Holds constants (like colours, strings) for consistent use across files
+## Features
+
+- Add new tasks in a scrollable task panel
+- Delete tasks and manage individual checkbox state
+- Uses a custom UI font and a compact task component layout
+- Built with Swing and custom component composition
+
+## Files
+
+- `App.java` — application entry point and Swing EDT launcher
+- `ToDoListGui.java` — main application window and task panel layout
+- `TaskComponent.java` — individual task UI component with delete and checkbox behavior
+- `ToDoList.java` — placeholder core class used by the app
+- `CommonConstants.java` — shared UI size and style constants
+- `resources/` — custom font resource used by the GUI
+
+## Run
+
+```powershell
+cd "To Do List"
+javac -d out src\*.java
+java -cp out;resources App
+```
+
+> Note: The app loads a custom font from `resources/`. If you run from the terminal, include `resources` on the classpath or use an IDE that includes project resources automatically.

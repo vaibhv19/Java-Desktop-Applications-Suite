@@ -1,17 +1,27 @@
-# Paint GUI Application
+# Paint
 
-A simple Java Swing-based drawing application where users can draw points of different colors on a canvas.
+A Java Swing drawing application that lets users draw freehand lines and change brush color on a custom canvas.
 
-## Files & Their Roles
+## Features
 
-- **App.java**  
-  Entry point of the application. Uses `SwingUtilities.invokeLater` to ensure GUI creation on the Event Dispatch Thread.
+- Draw with the mouse on a custom canvas
+- Choose stroke color using a color picker
+- Reset the canvas to clear drawings
+- Simple UI built with Swing and SpringLayout
 
-- **PaintGui.java**  
-  Main window frame that sets up the GUI components like canvas and control buttons.
+## Files
 
-- **Canvas.java**  
-  A custom JPanel that handles mouse input and draws colored points on the screen.
+- `App.java` — application entry point and Swing EDT launcher
+- `PaintGui.java` — window layout, buttons, and canvas panel
+- `Canvas.java` — custom drawing component and mouse event handling
+- `ColorPoint.java` — model object for storing point color and position
 
-- **ColorPoint.java**  
-  A simple data class representing a point's coordinates and its color.
+## Run
+
+```powershell
+cd Paint
+javac -d out src\*.java
+java -cp out App
+```
+
+The app uses only Java SE and Swing components.
